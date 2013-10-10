@@ -33,6 +33,8 @@ public:
   void BookHistos (const TString& prefix);
   void InitBaby();
   float dRbetweenVectors(LorentzVector vec1, LorentzVector vec2 );
+  std::pair<float,float> getPhiCorrMET( float met, float metphi, int nvtx, bool ismc );
+  std::pair<float,float> Type1PFMET( VofP4 jets_p4 , std::vector<float> cors , std::vector<float> l1cors , float minpt );
 
   // Set globals
   void set_createTree   (bool  b)    { g_createTree   = b; }
@@ -55,6 +57,20 @@ private:
 
   // histograms
   TH1F* h_met;
+  TH1F* h_njets;
+  TH1F* h_nbtags;
+  TH1F* h_ht;
+  TH1F* h_st;
+  TH1F* h_mht30;
+  TH1F* h_mht15;
+  TH1F* h_meff;
+
+  TH2F* h_mht30rel_vs_ht;
+  TH2F* h_metrel_vs_ht;
+  TH2F* h_mht30rel_vs_st;
+  TH2F* h_metrel_vs_st;
+  TH2F* h_mht30rel_vs_meff;
+  TH2F* h_metrel_vs_meff;
 
 };
 

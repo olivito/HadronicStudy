@@ -6,6 +6,7 @@
 #pragma link C++ all functions;
 
 #pragma link C++ class hadronicStudyLooper;
+//#pragma link C++ class std::vector<ROOT::Math::LorentzVector<ROOT::Math::PxPyPzE4D<float> > >;
 
 #endif
 
